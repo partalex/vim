@@ -1,0 +1,1 @@
+## This repository has purpose to configure vim:
