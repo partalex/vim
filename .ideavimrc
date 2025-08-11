@@ -57,22 +57,22 @@ noremap <leader>cs :source ~/.ideavimrc<CR>
 
 
 " ******************** Navigation **************************
-map <leader>sc <Action>(GotoClass)
-map <leader>sf <Action>(GotoFile)
-map <leader>ss <Action>(GotoSymbol)
-map <leader>sa <Action>(GotoAction)
-map <leader>sd <Action>(GotoDeclaration)
-map <leader>st <Action>(GotoTypeDeclaration)
+" map <leader>sc <Action>(GotoClass)
+" map <leader>sf <Action>(GotoFile)
+" map <leader>ss <Action>(GotoSymbol)
+" map <leader>sa <Action>(GotoAction)
+" map <leader>sd <Action>(GotoDeclaration)
+" map <leader>st <Action>(GotoTypeDeclaration)
 map <leader>gl <Action>(GotoLine):
 
 
-e ******************** Error navigation ********************
-map <leader>en <Action>(GotoNextError)
-map <leader>ep <Action>(GoToPreviousError)
-map <leader>lc <Action>(JumpToLastChecked)
+******************** Error navigation **********************
+" map <leader>en <Action>(GotoNextError)
+" map <leader>ep <Action>(GoToPreviousError)
+" map <leader>lc <Action>(JumpToLastChecked)
 
 
-" ******************** File path ***************************
+******************** File path ***************************
 map <leader>ca <Action>(CopyFilePath)
 map <leader>cu <Action>(CopyRelativeFilePath)
 map <leader>cf <Action>(CopyFileName)
