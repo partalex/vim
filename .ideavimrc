@@ -85,7 +85,7 @@ map <leader>gl <Action>(GotoLine):
 " ******************** NERDTree ***************************
 set NERDTree
 " nmap <leader>e :NERDTreeToggle<CR>
-nmap <leader>p :NERDTreeFocup<CR>
+" nmap <leader>p :NERDTreeFocup<CR>
 " let g:NERDTreeMapActivateNode = <leader>n
 " let g:NERDTreeMapJumpToNode = <leader>j
 
@@ -94,6 +94,7 @@ nmap <leader>p :NERDTreeFocup<CR>
 " map <leader>en <Action>(GotoNextError)
 " map <leader>ep <Action>(GoToPreviousError)
 " map <leader>lc <Action>(JumpToLastChecked)
+
 
 " ******************** Others ******************************
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
