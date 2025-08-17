@@ -47,4 +47,3 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>  " Ctrl+n to toggle NERDTree
 " autocmd VimEnter * NERDTree    " Open NERDTree at startup
 autocmd VimEnter * if argc() == 0 | NERDTree | endif
-

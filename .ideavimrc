@@ -1,47 +1,38 @@
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+" ******************** Testing *****************************
+" :set visualbell
+" ******************** Terminal ****************************
+" nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+" nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+
 
 " ******************** Leader ******************************
 let mapleader = ' '
 
 
-dfafasdf" ******************** Testing *****************************
-" inoremap <C-n> <C-j>
-" inoremap <C-p> <C-k>
-:set ideajoin
-" nnoremap <C-n> n
-" nnoremap <C-p> N
-
-
 " ******************** Tabs ********************************
-map <leader>qq <Action>(CloseContent)
-map <leader>qw <Action>(CloseAllEditors)
-" noremap <A-s> :w<CR>
-map <leader>vr <Action>(MoveTabRight)
-map <leader>vd <Action>(MoveTabDown)
-" noremap <A-s> :w<CR>
+map <leader>q <Action>(CloseContent)
+map <leader>qa <Action>(CloseAllEditors)
+map <leader>== <Action>(MoveTabRight)
+map <leader>-- <Action>(MoveTabDown)
 
 
-" ******************** Search ******************************
+" ******************** Editing *****************************
 set incsearch
 set hlsearch
 set ic
 set smartcase
-noremap <Esc> :nohlsearch<cr>
-" Don't use Ex mode, use Q for formatting.
-" map Q gq
-
-
-" ******************** Editing *****************************
+set ideajoin
+set idearefactormode=keep
+noremap <Esc> :nohlsearch<CR>
 map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
 set clipboard+=unnamed
-"Duplicate line down
-" TODO: Fix this
-noremap <leader>dd <Action>(DuplicateLineDown)
+nnoremap <leader>d :action EditorDuplicate<CR>
+nnoremap <C-a> mo ggVGy'o
+" nnoremap <C-a> ggVG
 
 
-" ******************** Debugging  *****************************
+" ******************** Debugging  **************************
 map <leader>rd <Action>(Debug)
 map <leader>rr <Action>(Run)
 map <leader>b <Action>(ToggleLineBreakpoint)
@@ -52,7 +43,7 @@ noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 
 
-******************** File path ***************************
+" ******************** File path ***************************
 map <leader>ca <Action>(CopyFilePath)
 map <leader>cu <Action>(CopyRelativeFilePath)
 map <leader>cf <Action>(CopyFileName)
@@ -63,14 +54,15 @@ map <leader>cp <Action>(CopyContentRootPath)
 map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
 map <leader>rf <Action>(RenameFile)
-" map <leader>df <Action>(DeleteFile)
-" Not working :(
+" map <leader>fd <Action>(DeleteFile)
+" FIXME: Not working
 " map <leader>fs <Action>(NewScratchFile)
+" nnoremap <leader>fs :action NewScratchFile<CR>
 
 
 " ******************** IDE *********************************
 map <leader>ri <Action>(RestartIde)
-map <leader>qa <Action>(ShowIntentionActions)
+" map <leader>qa <Action>(ShowIntentionActions)
 
 
 " ******************** Navigation **************************
@@ -82,7 +74,8 @@ map <leader>gl <Action>(GotoLine):
 " map <leader>sd <Action>(GotoDeclaration)
 " map <leader>st <Action>(GotoTypeDeclaration)
 
-" ******************** NERDTree ***************************
+
+" ******************** NERDTree ****************************
 set NERDTree
 " nmap <leader>e :NERDTreeToggle<CR>
 " nmap <leader>p :NERDTreeFocup<CR>
@@ -96,9 +89,14 @@ set NERDTree
 " map <leader>lc <Action>(JumpToLastChecked)
 
 
-" ******************** Others ******************************
+" ******************** Plugins *****************************
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-" Highlight copied text
-" Plug 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 " Plug 'tpope/vim-commentary'
+
+
+" ******************** Examples ****************************
+" You can find a list of commands here: https://jb.gg/h40q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
