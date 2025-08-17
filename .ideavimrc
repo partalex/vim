@@ -1,21 +1,14 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses)
-"   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
-
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5:
-
 
 " ******************** Leader ******************************
 let mapleader = ' '
 
 
-" ******************** Testing *****************************
+dfafasdf" ******************** Testing *****************************
 " inoremap <C-n> <C-j>
 " inoremap <C-p> <C-k>
-" set ideajoin
+:set ideajoin
 " nnoremap <C-n> n
 " nnoremap <C-p> N
 
@@ -23,6 +16,9 @@ let mapleader = ' '
 " ******************** Tabs ********************************
 map <leader>qq <Action>(CloseContent)
 map <leader>qw <Action>(CloseAllEditors)
+" noremap <A-s> :w<CR>
+map <leader>vr <Action>(MoveTabRight)
+map <leader>vd <Action>(MoveTabDown)
 " noremap <A-s> :w<CR>
 
 
@@ -40,8 +36,8 @@ noremap <Esc> :nohlsearch<cr>
 map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
 set clipboard+=unnamed
-set smartjoin
-" Duplicate line down
+"Duplicate line down
+" TODO: Fix this
 noremap <leader>dd <Action>(DuplicateLineDown)
 
 
@@ -54,22 +50,6 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 " ******************** Vim config **************************
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
-
-
-" ******************** Navigation **************************
-" map <leader>sc <Action>(GotoClass)
-" map <leader>sf <Action>(GotoFile)
-" map <leader>ss <Action>(GotoSymbol)
-" map <leader>sa <Action>(GotoAction)
-" map <leader>sd <Action>(GotoDeclaration)
-" map <leader>st <Action>(GotoTypeDeclaration)
-map <leader>gl <Action>(GotoLine):
-
-
-******************** Error navigation **********************
-" map <leader>en <Action>(GotoNextError)
-" map <leader>ep <Action>(GoToPreviousError)
-" map <leader>lc <Action>(JumpToLastChecked)
 
 
 ******************** File path ***************************
@@ -92,6 +72,28 @@ map <leader>rf <Action>(RenameFile)
 map <leader>ri <Action>(RestartIde)
 map <leader>qa <Action>(ShowIntentionActions)
 
+
+" ******************** Navigation **************************
+map <leader>gl <Action>(GotoLine):
+" map <leader>sc <Action>(GotoClass)
+" map <leader>sf <Action>(GotoFile)
+" map <leader>ss <Action>(GotoSymbol)
+" map <leader>sa <Action>(GotoAction)
+" map <leader>sd <Action>(GotoDeclaration)
+" map <leader>st <Action>(GotoTypeDeclaration)
+
+" ******************** NERDTree ***************************
+set NERDTree
+" nmap <leader>e :NERDTreeToggle<CR>
+nmap <leader>p :NERDTreeFocup<CR>
+" let g:NERDTreeMapActivateNode = <leader>n
+" let g:NERDTreeMapJumpToNode = <leader>j
+
+
+******************** Error navigation **********************
+" map <leader>en <Action>(GotoNextError)
+" map <leader>ep <Action>(GoToPreviousError)
+" map <leader>lc <Action>(JumpToLastChecked)
 
 " ******************** Others ******************************
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
