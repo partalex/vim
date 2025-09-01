@@ -1,22 +1,18 @@
-" ******************** Testing *****************************
-" :set visualbell
-" ******************** Terminal ****************************
-" nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-" nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
-
-
 " ******************** Leader ******************************
 let mapleader = ' '
 
 
 " ******************** Tabs ********************************
-map <leader>q <Action>(CloseContent)
+map <leader>qq <Action>(CloseContent)
 map <leader>qa <Action>(CloseAllEditors)
 map <leader>== <Action>(MoveTabRight)
 map <leader>-- <Action>(MoveTabDown)
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
 
 
 " ******************** Editing *****************************
+" :set visualbell
 set incsearch
 set hlsearch
 set ic
@@ -26,10 +22,15 @@ set idearefactormode=keep
 noremap <Esc> :nohlsearch<CR>
 map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
-set clipboard+=unnamed
 nnoremap <leader>d :action EditorDuplicate<CR>
 nnoremap <C-a> mo ggVGy'o
-" nnoremap <C-a> ggVG
+nnoremap <leader>pp "+p
+nnoremap <leader>yy "+y
+vnoremap <leader>y  "+y
+" not so useful
+" nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+" some problem
+" nnoremap <leader>e :action EditorSelectWord<CR>
 
 
 " ******************** Debugging  **************************
@@ -48,7 +49,7 @@ map <leader>ca <Action>(CopyFilePath)
 map <leader>cu <Action>(CopyRelativeFilePath)
 map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
-
+map <leader>ss <Action>(SelectInProjectView)
 
 " ******************** File management *********************
 map <leader>nf <Action>(NewFile)
@@ -78,7 +79,7 @@ map <leader>gl <Action>(GotoLine):
 " ******************** NERDTree ****************************
 set NERDTree
 " nmap <leader>e :NERDTreeToggle<CR>
-" nmap <leader>p :NERDTreeFocup<CR>
+nmap <leader>p :NERDTreeFocup<CR>
 " let g:NERDTreeMapActivateNode = <leader>n
 " let g:NERDTreeMapJumpToNode = <leader>j
 
@@ -94,9 +95,3 @@ set NERDTree
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 " Plug 'tpope/vim-commentary'
-
-
-" ******************** Examples ****************************
-" You can find a list of commands here: https://jb.gg/h40q75
-" Find more examples here: https://jb.gg/share-ideavimrc
-
