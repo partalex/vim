@@ -51,6 +51,7 @@ map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
 
+
 " ******************** File management *********************
 map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
