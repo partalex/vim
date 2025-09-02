@@ -39,11 +39,6 @@ map <leader>rr <Action>(Run)
 map <leader>b <Action>(ToggleLineBreakpoint)
 
 
-" ******************** Vim config **************************
-noremap <leader>cc :edit ~/.ideavimrc<CR>
-noremap <leader>cs :source ~/.ideavimrc<CR>
-
-
 " ******************** File path ***************************
 map <leader>ca <Action>(CopyFilePath)
 map <leader>cu <Action>(CopyRelativeFilePath)
@@ -53,6 +48,7 @@ map <leader>ss <Action>(SelectInProjectView)
 
 
 " ******************** File management *********************
+set NERDTree
 map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
 map <leader>rf <Action>(RenameFile)
@@ -63,6 +59,8 @@ map <leader>rf <Action>(RenameFile)
 
 
 " ******************** IDE *********************************
+noremap <leader>cc :edit ~/.ideavimrc<CR>
+noremap <leader>cs :source ~/.ideavimrc<CR>
 map <leader>ri <Action>(RestartIde)
 " map <leader>qa <Action>(ShowIntentionActions)
 
@@ -75,14 +73,6 @@ map <leader>gl <Action>(GotoLine):
 " map <leader>sa <Action>(GotoAction)
 " map <leader>sd <Action>(GotoDeclaration)
 " map <leader>st <Action>(GotoTypeDeclaration)
-
-
-" ******************** NERDTree ****************************
-set NERDTree
-" nmap <leader>e :NERDTreeToggle<CR>
-nmap <leader>p :NERDTreeFocup<CR>
-" let g:NERDTreeMapActivateNode = <leader>n
-" let g:NERDTreeMapJumpToNode = <leader>j
 
 
 ******************** Error navigation **********************
