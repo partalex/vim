@@ -5,6 +5,7 @@ let mapleader = ' '
 " ******************** Tabs ********************************
 map <leader>qq <Action>(CloseContent)
 map <leader>qa <Action>(CloseAllEditors)
+map <leader>qo <Action>(CloseAllEditorsButActive)
 map <leader>== <Action>(MoveTabRight)
 map <leader>-- <Action>(MoveTabDown)
 map <leader>wv <Action>(SplitVertically)
