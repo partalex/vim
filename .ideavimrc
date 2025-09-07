@@ -21,6 +21,7 @@ set smartcase
 set ideajoin
 set idearefactormode=keep
 noremap <Esc> :nohlsearch<CR>
+map <leader>fr <Action>(Replace)
 map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
