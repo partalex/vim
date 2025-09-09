@@ -8,8 +8,6 @@ map <leader>qa <Action>(CloseAllEditors)
 map <leader>qo <Action>(CloseAllEditorsButActive)
 map <leader>== <Action>(MoveTabRight)
 map <leader>-- <Action>(MoveTabDown)
-map <leader>wv <Action>(SplitVertically)
-map <leader>ws <Action>(SplitHorizontally)
 
 
 " ******************** Editing *****************************
@@ -21,6 +19,7 @@ set smartcase
 set ideajoin
 set idearefactormode=keep
 noremap <Esc> :nohlsearch<CR>
+map <leader>ff <Action>(Find)
 map <leader>fr <Action>(Replace)
 map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
