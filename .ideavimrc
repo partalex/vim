@@ -44,8 +44,6 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 
 
 " ******************** File path ***************************
-map <leader>ca <Action>(CopyFilePath)
-map <leader>cu <Action>(CopyRelativeFilePath)
 map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
