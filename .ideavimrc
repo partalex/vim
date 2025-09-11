@@ -1,7 +1,6 @@
 " ******************** Leader ******************************
 let mapleader = ' '
 " Ctrl + Alt  \ = Toggle IdeaVim
-" TODO: Add this to PyCharm keymap
 " Alt + F11 = Open in terminal (Current file)
 
 
@@ -35,7 +34,6 @@ vnoremap <leader>y  "+y
 " Open path of project in terminal
 nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 vnoremap <leader>xP "_dP
-" some problem
 " nnoremap <leader>e :action EditorSelectWord<CR>
 
 
