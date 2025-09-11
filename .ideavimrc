@@ -23,12 +23,6 @@ nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 " nnoremap <leader>e :action EditorSelectWord<CR>
 
 
-" ******************** Leader ******************************
-let mapleader = ' '
-" Ctrl + Alt  \ = Toggle IdeaVim
-" Alt + F11 = Open in terminal (Current file)
-
-
 " ******************** Tabs ********************************
 map <leader>qq <Action>(CloseContent)
 map <leader>qa <Action>(CloseAllEditors)
@@ -54,6 +48,9 @@ map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
 
 " ******************** IDE *********************************
+let mapleader = ' '
+" Ctrl + Alt  \ = Toggle IdeaVim
+" Alt + F11 = Open in terminal (Current file)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 map <leader>ri <Action>(RestartIde)
