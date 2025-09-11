@@ -1,5 +1,8 @@
 " ******************** Leader ******************************
 let mapleader = ' '
+" Ctrl + Alt  \ = Toggle IdeaVim
+" TODO: Add this to PyCharm keymap
+" Alt + F11 = Open in terminal (Current file)
 
 
 " ******************** Tabs ********************************
@@ -21,17 +24,20 @@ set idearefactormode=keep
 noremap <Esc> :nohlsearch<CR>
 map <leader>ff <Action>(Find)
 map <leader>fr <Action>(Replace)
-map <leader>rc <Action>(ReformatCode)
 map <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
 nnoremap <C-a> mo ggVGy'o
+" TODO: add copy to clipboard
 nnoremap <leader>xd ggVGd
 nnoremap <leader>xx ggVG"+d
 nnoremap <leader>pp "+p
-nnoremap <leader>yy "+y
+nnoremap <leader>yy "+y$
 vnoremap <leader>y  "+y
 " not so useful
-" nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+"  Open path of project in terminal
+nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
+vnoremap <leader>xP "_dP
 " some problem
 " nnoremap <leader>e :action EditorSelectWord<CR>
 
@@ -55,10 +61,7 @@ set NERDTree
 map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
 map <leader>rf <Action>(RenameFile)
-" map <leader>fd <Action>(DeleteFile)
-" FIXME: Not working
-" map <leader>fs <Action>(NewScratchFile)
-" nnoremap <leader>fs :action NewScratchFile<CR>
+map <leader>fd <Action>(DeleteFile)
 
 
 " ******************** IDE *********************************
@@ -70,18 +73,18 @@ map <leader>ri <Action>(RestartIde)
 
 " ******************** Navigation **************************
 map <leader>gl <Action>(GotoLine):
-" map <leader>sc <Action>(GotoClass)
-" map <leader>sf <Action>(GotoFile)
-" map <leader>ss <Action>(GotoSymbol)
-" map <leader>sa <Action>(GotoAction)
-" map <leader>sd <Action>(GotoDeclaration)
-" map <leader>st <Action>(GotoTypeDeclaration)
+" map <leader> <Action>(GotoClass)
+" map <leader> <Action>(GotoFile)
+" map <leader> <Action>(GotoSymbol)
+" map <leader> <Action>(GotoAction)
+" map <leader> <Action>(GotoDeclaration)
+" map <leader> <Action>(GotoTypeDeclaration)
 
 
 ******************** Error navigation **********************
-" map <leader>en <Action>(GotoNextError)
-" map <leader>ep <Action>(GoToPreviousError)
-" map <leader>lc <Action>(JumpToLastChecked)
+" map <leader> <Action>(GotoNextError)
+" map <leader> <Action>(GoToPreviousError)
+" map <leader> <Action>(JumpToLastChecked)
 
 
 " ******************** Plugins *****************************
