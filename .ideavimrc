@@ -1,5 +1,5 @@
 " ******************** Editing *****************************
-" :set visualbell
+let mapleader = ' '
 set incsearch
 set hlsearch
 set ic
@@ -47,8 +47,8 @@ map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
 
+
 " ******************** IDE *********************************
-let mapleader = ' '
 " Ctrl + Alt  \ = Toggle IdeaVim
 " Alt + F11 = Open in terminal (Current file)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
