@@ -21,10 +21,6 @@ set smartcase
 set ideajoin
 set idearefactormode=keep
 noremap <Esc> :nohlsearch<CR>
-map <leader>ff <Action>(Find)
-map <leader>fr <Action>(Replace)
-map <leader>re <Action>(RenameElement)
-nnoremap <leader>d :action EditorDuplicate<CR>
 nnoremap <C-a> mo ggVGy'o
 nnoremap <leader>xc ggVG"+y
 nnoremap <leader>xd ggVGd
@@ -32,9 +28,12 @@ nnoremap <leader>xx ggVG"+d
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+y$
 vnoremap <leader>y  "+y
-" Open path of project in terminal
-nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 vnoremap <leader>xP "_dP
+map <leader>ff <Action>(Find)
+map <leader>fr <Action>(Replace)
+map <leader>re <Action>(RenameElement)
+nnoremap <leader>d :action EditorDuplicate<CR>
+nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 " nnoremap <leader>e :action EditorSelectWord<CR>
 
 
