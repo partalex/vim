@@ -28,7 +28,7 @@ noremap <Esc> :nohlsearch<CR>
 noremap <leader>xc mo ggVGy'o
 nnoremap <leader>xC ggVG"+y
 nnoremap <leader>xd ggVGd
-nioremap <leader>xx ggVG"+d
+nnoremap <leader>xD ggVG"+d
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+y$
 vnoremap <leader>y  "+y
@@ -54,7 +54,6 @@ set NERDTree
 map <leader>nf <Action>(NewFile)
 map <leader>nd <Action>(NewDir)
 map <leader>rf <Action>(RenameFile)
-map <leader>fd <Action>(DeleteFile)
 map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
@@ -80,6 +79,14 @@ map <leader>ri <Action>(RestartIde)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
+
+
+" ******************** Git  *********************************
+nmap <leader>Gb <Action>(Git.Branches)
+map <leader>Gp <Action>(Vcs.Push)
+nmap <leader>Gm <Action>(VcsGroups)
+nmap <leader>Gg <Action>(CheckinProject)
+nmap <leader>Gu <Action>(Vcs.UpdateProject)
 
 
 " ******************** Plugins *****************************
