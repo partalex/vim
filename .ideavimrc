@@ -1,34 +1,46 @@
 " ******************** Editing *****************************
-let mapleader = ' '
-set incsearch
-set hlsearch
-set ic
-set smartcase
+let mapleader="\<space>"
+set scrolloff=4
+set history=1000
 set ideajoin
 set idearefactormode=keep
-noremap <Esc> :nohlsearch<CR>
-noremap <leader>xc mo ggVGy'o
-nnoremap <leader>xC ggVG"+y
-nnoremap <leader>xd ggVGd
-nnoremap <leader>xx ggVG"+d
-nnoremap <leader>pp "+p
-nnoremap <leader>yy "+y$
-vnoremap <leader>y  "+y
-vnoremap <leader>xP "_dP
 map <leader>ff <Action>(Find)
 map <leader>fr <Action>(Replace)
 map <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
-nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
-" nnoremap <leader>e :action EditorSelectWord<CR>
+map t :action EditorSelectWord<CR>
+vnoremap < <gv
+vnoremap > >gv
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
+
+" ******************** Search ********************************
+set incsearch
+set hlsearch
+set ic
+set smartcase
+vnoremap \ /<C-R>"<CR>
+noremap <Esc> :nohlsearch<CR>
+
+
+" ******************** Clipboard ********************************
+noremap <leader>xc mo ggVGy'o
+nnoremap <leader>xC ggVG"+y
+nnoremap <leader>xd ggVGd
+nioremap <leader>xx ggVG"+d
+nnoremap <leader>pp "+p
+nnoremap <leader>yy "+y$
+vnoremap <leader>y  "+y
+vnoremap <leader>xP "_dP
 
 
 " ******************** Tabs ********************************
 map <leader>qq <Action>(CloseContent)
 map <leader>qa <Action>(CloseAllEditors)
 map <leader>qo <Action>(CloseAllEditorsButActive)
-map <leader>== <Action>(MoveTabRight)
-map <leader>-- <Action>(MoveTabDown)
+map <leader>= <Action>(MoveTabRight)
+map <leader>- <Action>(MoveTabDown)
 
 
 " ******************** Debugging  **************************
@@ -48,28 +60,26 @@ map <leader>cp <Action>(CopyContentRootPath)
 map <leader>ss <Action>(SelectInProjectView)
 
 
+" ******************** Navigation **************************
+map <leader>gl <Action>(GotoLine)
+map <leader>gl <Action>(GotoClass)
+map <leader>gf <Action>(GotoFile)
+map <leader>gs <Action>(GotoSymbol)
+map <leader>ga <Action>(GotoAction)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+nmap <C-p> <Action>(PreviousTab)
+nmap <C-n> <Action>(NextTab)
+" nnoremap <leader>1 1gt
+
+
 " ******************** IDE *********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
 " Alt + F11 = Open in terminal (Current file)
+map <leader>ri <Action>(RestartIde)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
-map <leader>ri <Action>(RestartIde)
-
-
-" ******************** Navigation **************************
-map <leader>gl <Action>(GotoLine)
-" map <leader> <Action>(GotoClass)
-" map <leader> <Action>(GotoFile)
-" map <leader> <Action>(GotoSymbol)
-" map <leader> <Action>(GotoAction)
-" map <leader> <Action>(GotoDeclaration)
-" map <leader> <Action>(GotoTypeDeclaration)
-
-
-******************** Error navigation **********************
-" map <leader> <Action>(GotoNextError)
-" map <leader> <Action>(GoToPreviousError)
-" map <leader> <Action>(JumpToLastChecked)
+nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 
 
 " ******************** Plugins *****************************
