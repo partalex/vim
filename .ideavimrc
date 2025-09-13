@@ -75,6 +75,8 @@ nmap <C-n> <Action>(NextTab)
 " ******************** IDE *********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
 " Alt + F11 = Open in terminal (Current file)
+" Ctrl = j = Up
+" Ctrl = k = Down
 map <leader>ri <Action>(RestartIde)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
