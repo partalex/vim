@@ -56,7 +56,7 @@ map <leader>nd <Action>(NewDir)
 map <leader>rf <Action>(RenameFile)
 map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
-map <leader>ss <Action>(SelectInProjectView)
+map <leader>s <Action>(SelectInProjectView)
 
 
 " ******************** Navigation **************************
