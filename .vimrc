@@ -9,7 +9,14 @@ nnoremap <leader>qq :q!<CR>
 " vnoremap <leader>y "+y
 
 
+vnoremap < <gv
+vnoremap > >gv
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
+
 " colorscheme desert
+set scrolloff=5
 set incsearch
 set hlsearch
 set smartcase
@@ -28,7 +35,6 @@ set shiftwidth=4
 
 
 " ************ Initialize vim-plug ************
-call plug#begin('~/.vim/plugged')
-
+" call plug#begin('~/.vim/plugged')
 " NERDTree plugin
 " Plug 'preservim/nerdtree'
