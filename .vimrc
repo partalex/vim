@@ -17,7 +17,6 @@ vnoremap J :m '>+1<CR>gv=gv
 
 " colorscheme desert
 set scrolloff=5
-set ic
 set incsearch
 set hlsearch
 set smartcase
