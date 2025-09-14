@@ -1,6 +1,6 @@
 " ******************** Editing *****************************
 let mapleader="\<space>"
-set scrolloff=6
+set scrolloff=5
 set history=1000
 set ideajoin
 set idearefactormode=keep
