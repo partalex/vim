@@ -1,5 +1,5 @@
 " ******************** Editing *****************************
-let mapleader="\<space>"
+let mapleader=" "
 set scrolloff=5
 set history=1000
 set ideajoin
@@ -78,6 +78,7 @@ nmap <C-n> <Action>(NextTab)
 " Alt + F11 = Open in terminal (Current file)
 " Ctrl = j = Up
 " Ctrl = k = Down
+" Caps Lock = Esc
 map <leader>ri <Action>(RestartIde)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
@@ -87,7 +88,7 @@ nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 " ******************** Git  *********************************
 nmap <leader>Gb <Action>(Git.Branches)
 map <leader>Gp <Action>(Vcs.Push)
-nmap <leader>Gm <Action>(VcsGroups)
+" nmap <leader>Gm <Action>(VcsGroups)
 nmap <leader>Gg <Action>(CheckinProject)
 nmap <leader>Gu <Action>(Vcs.UpdateProject)
 
