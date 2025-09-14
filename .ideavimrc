@@ -57,6 +57,7 @@ map <leader>rf <Action>(RenameFile)
 map <leader>cf <Action>(CopyFileName)
 map <leader>cp <Action>(CopyContentRootPath)
 map <leader>s <Action>(SelectInProjectView)
+map <leader>j <Action>(ActivateProjectToolWindow)
 
 
 " ******************** Navigation **************************
