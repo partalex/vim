@@ -1,12 +1,10 @@
 let mapleader = ' '
 
 
-nnoremap <leader>wq :wq<CR>
-nnoremap <leader>ww :w<CR>
 nnoremap <leader>qq :q!<CR>
-" nnoremap <leader>pp "+p
-" nnoremap <leader>yy "+y
-" vnoremap <leader>y "+y
+nnoremap <leader>pp "+p
+nnoremap <leader>yy "+y
+vnoremap <leader>y "+y
 
 
 vnoremap < <gv
@@ -16,19 +14,19 @@ vnoremap J :m '>+1<CR>gv=gv
 
 
 " colorscheme desert
-set scrolloff=5
 set incsearch
 set hlsearch
+set ic
 set smartcase
-set number
 set showmatch
-set autoindent
-set smartindent
-set laststatus=2
 noremap <Esc> :nohlsearch<cr>
 
 
-" Indent with spaces instead of tabs
+set scrolloff=5
+set autoindent
+set number
+set smartindent
+set laststatus=2
 set expandtab
 set tabstop=4
 set shiftwidth=4
