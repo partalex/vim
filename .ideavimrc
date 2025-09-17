@@ -16,12 +16,12 @@ vnoremap J :m '>+1<CR>gv=gv
 
 
 " ******************** Search ********************************
-set incsearch
-set hlsearch
 set ic
+set hlsearch
+set incsearch
 set smartcase
-vnoremap \ /<C-R>"<CR>
 noremap <Esc> :nohlsearch<CR>
+" vnoremap \ /<C-R>"<CR>
 
 
 " ******************** Clipboard ********************************

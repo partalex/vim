@@ -14,9 +14,9 @@ vnoremap J :m '>+1<CR>gv=gv
 
 
 " colorscheme desert
+set ic
 set incsearch
 set hlsearch
-set ic
 set smartcase
 set showmatch
 noremap <Esc> :nohlsearch<cr>
