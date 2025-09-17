@@ -2,10 +2,7 @@ let mapleader = ' '
 
 
 nnoremap <leader>qq :q!<CR>
-nnoremap <leader>pp "+p
-nnoremap <leader>yy "+y
-vnoremap <leader>y "+y
-
+nnoremap <leader>s :x
 
 vnoremap < <gv
 vnoremap > >gv
@@ -15,21 +12,22 @@ vnoremap J :m '>+1<CR>gv=gv
 
 " colorscheme desert
 set ic
-set incsearch
 set hlsearch
+set incsearch
 set smartcase
 set showmatch
 noremap <Esc> :nohlsearch<cr>
+xnoremap * y/\V<C-R>"<CR>
 
 
-set scrolloff=5
-set autoindent
 set number
-set smartindent
-set laststatus=2
-set expandtab
 set tabstop=4
+set expandtab
+set autoindent
+set scrolloff=5
+set smartindent
 set shiftwidth=4
+set laststatus=2
 
 
 " ************ Initialize vim-plug ************
