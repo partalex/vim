@@ -23,7 +23,7 @@ set scrolloff=5
 set smartindent
 set shiftwidth=4
 set laststatus=2
-" colorscheme retrobox
+colorscheme retrobox
 
 " ************ Initialize vim-plug ************
 " call plug#begin('~/.vim/plugged')

@@ -1,5 +1,6 @@
 set -o vi
 
-alias cc='clear'
+alias ..='cd ..'
+alias c='clear'
 alias vc='vim ~/.vimrc'
 alias bc='vim ~/.bashrc'
