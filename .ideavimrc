@@ -30,7 +30,7 @@ nnoremap <leader>xC ggVG"+y
 nnoremap <leader>xd ggVGd
 nnoremap <leader>xD ggVG"+d
 nnoremap <leader>pp "+p
-nnoremap <leader>yy "+y$
+nnoremap <leader>yy "+yy
 vnoremap <leader>y  "+y
 vnoremap <leader>xP "_dP
 
