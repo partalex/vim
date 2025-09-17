@@ -20,8 +20,8 @@ set ic
 set hlsearch
 set incsearch
 set smartcase
+xnoremap * y/\V<C-R>"<CR>
 noremap <Esc> :nohlsearch<CR>
-" vnoremap \ /<C-R>"<CR>
 
 
 " ******************** Clipboard ********************************
