@@ -86,7 +86,7 @@ nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 
 " ******************** Git  *********************************
 nmap <leader>Gb <Action>(Git.Branches)
-map <leader>Gp <Action>(Vcs.Push)
+nmap <leader>Gp <Action>(Vcs.Push)
 " nmap <leader>Gm <Action>(VcsGroups)
 nmap <leader>Gg <Action>(CheckinProject)
 nmap <leader>Gu <Action>(Vcs.UpdateProject)
