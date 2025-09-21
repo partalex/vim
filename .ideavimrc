@@ -8,7 +8,7 @@ map <leader>ff <Action>(Find)
 map <leader>fr <Action>(Replace)
 map <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
-map t :action EditorSelectWord<CR>
+map , :action EditorSelectWord<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -32,7 +32,7 @@ nnoremap <leader>xD ggVG"+d
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+yy
 vnoremap <leader>y  "+y
-vnoremap <leader>xP "_dP
+vnoremap <leader>xP "_d+p
 
 
 " ******************** Tabs ********************************
