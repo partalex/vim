@@ -5,10 +5,10 @@ set scrolloff=5
 set history=1000
 set ideajoin
 set idearefactormode=keep
-nmap <leader>ff <Action>(Find)
-nmap <leader>fr <Action>(Replace)
-nmap <leader>re <Action>(RenameElement)
-nnoremap <leader>d :action EditorDuplicate<CR>
+map <leader>ff <Action>(Find)
+map <leader>fr <Action>(Replace)
+map <leader>re <Action>(RenameElement)
+noremap <leader>d :action EditorDuplicate<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 xnoremap < <gv
@@ -27,10 +27,10 @@ noremap <Esc> :nohlsearch<CR>
 
 
 " ******************** Clipboard ********************************
-nnoremap <leader>xc :%y
-nnoremap <leader>xC :%y+
-nnoremap <leader>xd :%d
-nnoremap <leader>xD :%d+
+nnoremap <leader>xc :%y<CR>
+nnoremap <leader>xC :%y+<CR>
+nnoremap <leader>xd :%d<CR>
+nnoremap <leader>xD :%d+<CR>
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
@@ -75,7 +75,6 @@ nmap <C-p> <Action>(PreviousTab)
 nmap <C-n> <Action>(NextTab)
 " nnoremap <leader>1 1gt
 
-
 " ******************** IDE *********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
 " Alt + F11 = Open in terminal (Current file)
@@ -96,7 +95,5 @@ nmap <leader>Gu <Action>(Vcs.UpdateProject)
 
 
 " ******************** Plugins *****************************
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
 " Plug 'tpope/vim-commentary'
