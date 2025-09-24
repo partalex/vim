@@ -27,10 +27,10 @@ noremap <Esc> :nohlsearch<CR>
 
 
 " ******************** Clipboard ********************************
-nnoremap <leader>xc mo ggVGy'o
-nnoremap <leader>xC ggVG"+y
-nnoremap <leader>xd ggVGd
-nnoremap <leader>xD ggVG"+d
+nnoremap <leader>xc :%y
+nnoremap <leader>xC :%y+
+nnoremap <leader>xd :%d
+nnoremap <leader>xD :%d+
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
