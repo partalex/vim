@@ -10,11 +10,11 @@ nmap <leader>fr <Action>(Replace)
 nmap <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
 nmap , :action EditorSelectWord<CR>
-vmap , :action EditorSelectWord<CR>
-vnoremap < <gv
+xmap , :action EditorSelectWord<CR>
+xnoremap < <gv
 vnoremap > >gv
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
+xnoremap K :m '<-2<CR>gv=gv
+xnoremap J :m '>+1<CR>gv=gv
 
 
 " ******************** Search ********************************
@@ -27,14 +27,14 @@ noremap <Esc> :nohlsearch<CR>
 
 
 " ******************** Clipboard ********************************
-noremap <leader>xc mo ggVGy'o
+nnoremap <leader>xc mo ggVGy'o
 nnoremap <leader>xC ggVG"+y
 nnoremap <leader>xd ggVGd
 nnoremap <leader>xD ggVG"+d
 nnoremap <leader>pp "+p
 nnoremap <leader>yy "+yy
-vnoremap <leader>y  "+y
-vnoremap <leader>xP "_d+p
+xnoremap <leader>y  "+y
+xnoremap <leader>xP "_d+p
 
 
 " ******************** Tabs ********************************
