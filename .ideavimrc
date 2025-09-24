@@ -12,7 +12,7 @@ noremap <leader>d :action EditorDuplicate<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 xnoremap < <gv
-vnoremap > >gv
+xnoremap > >gv
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
 
@@ -64,15 +64,13 @@ nmap <leader>j <Action>(ActivateProjectToolWindow)
 
 " ******************** Navigation **************************
 nmap <leader>gl <Action>(GotoLine)
-nmap <leader>gl <Action>(GotoClass)
+nmap <leader>gc <Action>(GotoClass)
 nmap <leader>gf <Action>(GotoFile)
 nmap <leader>gs <Action>(GotoSymbol)
 nmap <leader>ga <Action>(GotoAction)
 nmap <leader>a <Plug>(easymotion-s)
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
-nmap <C-p> <Action>(PreviousTab)
-nmap <C-n> <Action>(NextTab)
 nmap <leader>1 1gt
 nmap <leader>2 2gt
 nmap <leader>3 3gt
