@@ -5,9 +5,9 @@ set scrolloff=5
 set history=1000
 set ideajoin
 set idearefactormode=keep
-map <leader>ff <Action>(Find)
-map <leader>fr <Action>(Replace)
-map <leader>re <Action>(RenameElement)
+map <leader>ff :action Find<CR>
+map <leader>fr :action Replace<CR>
+map <leader>re :action RenameElement<CR>
 noremap <leader>d :action EditorDuplicate<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
@@ -38,39 +38,39 @@ xnoremap <leader>xP "_d+p
 
 
 " ******************** Tabs ********************************
-nmap <leader>qq <Action>(CloseContent)
-nmap <leader>qa <Action>(CloseAllEditors)
-nmap <leader>qo <Action>(CloseAllEditorsButActive)
-nmap <leader>= <Action>(MoveTabRight)
-nmap <leader>- <Action>(MoveTabDown)
+nmap <leader>qq :action CloseContent<CR>
+nmap <leader>qa :action CloseAllEditors<CR>
+nmap <leader>qo :action CloseAllEditorsButActive<CR>
+nmap <leader>= :action MoveTabRight<CR>
+nmap <leader>- :action MoveTabDown<CR>
 
 
 " ******************** Debugging  **************************
-nmap <leader>rd <Action>(Debug)
-nmap <leader>rr <Action>(Run)
-nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>rd :action Debug<CR>
+nmap <leader>rr :action Run<CR>
+nmap <leader>b :action ToggleLineBreakpoint<CR>
 
 
 " ******************** File management *********************
 set NERDTree
-nmap <leader>nf <Action>(NewFile)
-nmap <leader>nd <Action>(NewDir)
-nmap <leader>rf <Action>(RenameFile)
-nmap <leader>cf <Action>(CopyFileName)
-nmap <leader>cp <Action>(CopyContentRootPath)
-nmap <leader>s <Action>(SelectInProjectView)
-nmap <leader>j <Action>(ActivateProjectToolWindow)
+nmap <leader>nf :action NewFile<CR>
+nmap <leader>nd :action NewDir<CR>
+nmap <leader>rf :action RenameFile<CR>
+nmap <leader>cf :action CopyFileName<CR>
+nmap <leader>cp :action CopyContentRootPath<CR>
+nmap <leader>s :action SelectInProjectView<CR>
+nmap <leader>j :action ActivateProjectToolWindow<CR>
 
 
 " ******************** Navigation **************************
-nmap <leader>gl <Action>(GotoLine)
-nmap <leader>gc <Action>(GotoClass)
-nmap <leader>gf <Action>(GotoFile)
-nmap <leader>gs <Action>(GotoSymbol)
-nmap <leader>ga <Action>(GotoAction)
+nmap <leader>gl :action GotoLine<CR>
+nmap <leader>gc :action GotoClass<CR>
+nmap <leader>gf :action GotoFile<CR>
+nmap <leader>gs :action GotoSymbol<CR>
+nmap <leader>ga :action GotoAction<CR>
 nmap <leader>a <Plug>(easymotion-s)
-nmap [[ <Action>(MethodUp)
-nmap ]] <Action>(MethodDown)
+nmap [[ :action MethodUp<CR>
+nmap ]] :action MethodDown<CR>
 nmap <leader>1 1gt
 nmap <leader>2 2gt
 nmap <leader>3 3gt
@@ -78,21 +78,21 @@ nmap <leader>3 3gt
 
 " ******************** IDE *********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
-" Alt + F11 = Open in terminal (Current file)
+" Alt + F11 = Open in terminal (Current file<CR>
 " Ctrl + j = Up, Ctrl + k = Down
 " Caps Lock = Esc
-nmap <leader>ri <Action>(RestartIde)
+nmap <leader>ri :action RestartIde<CR>
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 
 
 " ******************** Git  *********************************
-nmap <leader>Gb <Action>(Git.Branches)
-nmap <leader>Gp <Action>(Vcs.Push)
-" nmap <leader>Gm <Action>(VcsGroups)
-nmap <leader>Gg <Action>(CheckinProject)
-nmap <leader>Gu <Action>(Vcs.UpdateProject)
+nmap <leader>Gb :action Git.Branches<CR>
+nmap <leader>Gp :action Vcs.Push<CR>
+" nmap <leader>Gm :action VcsGroups<CR>
+nmap <leader>Gg :action CheckinProject<CR>
+nmap <leader>Gu :action Vcs.UpdateProject<CR>
 
 
 " ******************** Plugins *****************************
