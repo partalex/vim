@@ -31,7 +31,7 @@ nnoremap <leader>xc :%y<CR>
 nnoremap <leader>xC :%y+<CR>
 nnoremap <leader>xd :%d<CR>
 nnoremap <leader>xD :%d+<CR>
-nnoremap <leader>pp "+p
+nnoremap <leader>p "+p
 nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
 xnoremap <leader>xP "_d+p
