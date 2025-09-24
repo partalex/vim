@@ -17,7 +17,7 @@ xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
 
 
-" ******************** Search ********************************
+" ******************** Search *******************************
 set ic
 set hlsearch
 set incsearch
@@ -26,7 +26,7 @@ xnoremap * y/\V<C-R>"<CR>
 noremap <Esc> :nohlsearch<CR>
 
 
-" ******************** Clipboard ********************************
+" ******************** Clipboard ****************************
 nnoremap <leader>xc :%y<CR>
 nnoremap <leader>xC :%y+<CR>
 nnoremap <leader>xd :%d<CR>
@@ -34,10 +34,10 @@ nnoremap <leader>xD :%d+<CR>
 nnoremap <leader>p "+p
 nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
-xnoremap <leader>xP "_d+p
+xnoremap <leader>p "_d"+P
 
 
-" ******************** Tabs ********************************
+" ******************** Tabs *********************************
 nmap <leader>qq :action CloseContent<CR>
 nmap <leader>qa :action CloseAllEditors<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
@@ -45,13 +45,13 @@ nmap <leader>= :action MoveTabRight<CR>
 nmap <leader>- :action MoveTabDown<CR>
 
 
-" ******************** Debugging  **************************
+" ******************** Debugging  ***************************
 nmap <leader>rd :action Debug<CR>
 nmap <leader>rr :action Run<CR>
 nmap <leader>b :action ToggleLineBreakpoint<CR>
 
 
-" ******************** File management *********************
+" ******************** File management **********************
 set NERDTree
 nmap <leader>nf :action NewFile<CR>
 nmap <leader>nd :action NewDir<CR>
@@ -62,12 +62,12 @@ nmap <leader>s :action SelectInProjectView<CR>
 nmap <leader>j :action ActivateProjectToolWindow<CR>
 
 
-" ******************** Navigation **************************
-nmap <leader>gl :action GotoLine<CR>
-nmap <leader>gc :action GotoClass<CR>
-nmap <leader>gf :action GotoFile<CR>
-nmap <leader>gs :action GotoSymbol<CR>
-nmap <leader>ga :action GotoAction<CR>
+" ******************** Navigation ***************************
+map <leader>gl :action GotoLine<CR>
+map <leader>gc :action GotoClass<CR>
+map <leader>gf :action GotoFile<CR>
+map <leader>gs :action GotoSymbol<CR>
+map <leader>ga :action GotoAction<CR>
 nmap <leader>a <Plug>(easymotion-s)
 nmap [[ :action MethodUp<CR>
 nmap ]] :action MethodDown<CR>
@@ -76,7 +76,7 @@ nmap <leader>2 2gt
 nmap <leader>3 3gt
 
 
-" ******************** IDE *********************************
+" ******************** IDE **********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
 " Alt + F11 = Open in terminal (Current file<CR>
 " Ctrl + j = Up, Ctrl + k = Down
@@ -95,6 +95,6 @@ nmap <leader>Gg :action CheckinProject<CR>
 nmap <leader>Gu :action Vcs.UpdateProject<CR>
 
 
-" ******************** Plugins *****************************
+" ******************** Plugins ******************************
 Plug 'machakann/vim-highlightedyank'
 " Plug 'tpope/vim-commentary'
