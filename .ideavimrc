@@ -73,7 +73,10 @@ nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 nmap <C-p> <Action>(PreviousTab)
 nmap <C-n> <Action>(NextTab)
-" nnoremap <leader>1 1gt
+nmap <leader>1 1gt
+nmap <leader>2 2gt
+nmap <leader>3 3gt
+
 
 " ******************** IDE *********************************
 " Ctrl + Alt  \ = Toggle IdeaVim
