@@ -12,7 +12,7 @@ noremap <leader>d :action EditorDuplicate<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 xnoremap < <gv
-vnoremap > >gv
+xnoremap > >gv
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
 
@@ -64,7 +64,7 @@ nmap <leader>j <Action>(ActivateProjectToolWindow)
 
 " ******************** Navigation **************************
 nmap <leader>gl <Action>(GotoLine)
-nmap <leader>gl <Action>(GotoClass)
+nmap <leader>gc <Action>(GotoClass)
 nmap <leader>gf <Action>(GotoFile)
 nmap <leader>gs <Action>(GotoSymbol)
 nmap <leader>ga <Action>(GotoAction)
