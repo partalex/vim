@@ -1,14 +1,16 @@
 " ******************** Editing *****************************
 let mapleader=" "
+set easymotion
 set scrolloff=5
 set history=1000
 set ideajoin
 set idearefactormode=keep
-map <leader>ff <Action>(Find)
-map <leader>fr <Action>(Replace)
-map <leader>re <Action>(RenameElement)
+nmap <leader>ff <Action>(Find)
+nmap <leader>fr <Action>(Replace)
+nmap <leader>re <Action>(RenameElement)
 nnoremap <leader>d :action EditorDuplicate<CR>
-map , :action EditorSelectWord<CR>
+nmap , :action EditorSelectWord<CR>
+vmap , :action EditorSelectWord<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -36,36 +38,37 @@ vnoremap <leader>xP "_d+p
 
 
 " ******************** Tabs ********************************
-map <leader>qq <Action>(CloseContent)
-map <leader>qa <Action>(CloseAllEditors)
-map <leader>qo <Action>(CloseAllEditorsButActive)
-map <leader>= <Action>(MoveTabRight)
-map <leader>- <Action>(MoveTabDown)
+nmap <leader>qq <Action>(CloseContent)
+nmap <leader>qa <Action>(CloseAllEditors)
+nmap <leader>qo <Action>(CloseAllEditorsButActive)
+nmap <leader>= <Action>(MoveTabRight)
+nmap <leader>- <Action>(MoveTabDown)
 
 
 " ******************** Debugging  **************************
-map <leader>rd <Action>(Debug)
-map <leader>rr <Action>(Run)
-map <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>rd <Action>(Debug)
+nmap <leader>rr <Action>(Run)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
 
 
 " ******************** File management *********************
 set NERDTree
-map <leader>nf <Action>(NewFile)
-map <leader>nd <Action>(NewDir)
-map <leader>rf <Action>(RenameFile)
-map <leader>cf <Action>(CopyFileName)
-map <leader>cp <Action>(CopyContentRootPath)
-map <leader>s <Action>(SelectInProjectView)
-map <leader>j <Action>(ActivateProjectToolWindow)
+nmap <leader>nf <Action>(NewFile)
+nmap <leader>nd <Action>(NewDir)
+nmap <leader>rf <Action>(RenameFile)
+nmap <leader>cf <Action>(CopyFileName)
+nmap <leader>cp <Action>(CopyContentRootPath)
+nmap <leader>s <Action>(SelectInProjectView)
+nmap <leader>j <Action>(ActivateProjectToolWindow)
 
 
 " ******************** Navigation **************************
-map <leader>gl <Action>(GotoLine)
-map <leader>gl <Action>(GotoClass)
-map <leader>gf <Action>(GotoFile)
-map <leader>gs <Action>(GotoSymbol)
-map <leader>ga <Action>(GotoAction)
+nmap <leader>gl <Action>(GotoLine)
+nmap <leader>gl <Action>(GotoClass)
+nmap <leader>gf <Action>(GotoFile)
+nmap <leader>gs <Action>(GotoSymbol)
+nmap <leader>ga <Action>(GotoAction)
+nmap <leader>a <Plug>(easymotion-s)
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 nmap <C-p> <Action>(PreviousTab)
@@ -78,7 +81,7 @@ nmap <C-n> <Action>(NextTab)
 " Alt + F11 = Open in terminal (Current file)
 " Ctrl + j = Up, Ctrl + k = Down
 " Caps Lock = Esc
-map <leader>ri <Action>(RestartIde)
+nmap <leader>ri <Action>(RestartIde)
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
 nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
