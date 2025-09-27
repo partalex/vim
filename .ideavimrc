@@ -1,21 +1,22 @@
 " ******************** Editing *****************************
 let mapleader=" "
+set nu rnu
+" set relativenumber number
 set ideajoin
 set easymotion
+xnoremap < <gv
+xnoremap > >gv
 set scrolloff=5
 set history=1000
 set idearefactormode=keep
-set relativenumber number
-map <leader>ff :action Find<CR>
-map <leader>fr :action Replace<CR>
-map <leader>re :action RenameElement<CR>
-noremap <leader>d :action EditorDuplicate<CR>
-nmap , :action EditorSelectWord<CR>
-xmap , :action EditorSelectWord<CR>
-xnoremap < <gv
-xnoremap > >gv
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
+map <leader>ff :action Find<CR>
+map <leader>fr :action Replace<CR>
+nmap , :action EditorSelectWord<CR>
+xmap , :action EditorSelectWord<CR>
+map <leader>re :action RenameElement<CR>
+noremap <leader>d :action EditorDuplicate<CR>
 
 
 " ******************** Search *******************************
@@ -39,23 +40,23 @@ xnoremap <leader>p "_d"+P
 
 
 " ******************** Tabs *********************************
+nmap <leader>- :action MoveTabDown<CR>
+nmap <leader>= :action MoveTabRight<CR>
 nmap <leader>qq :action CloseContent<CR>
 nmap <leader>qa :action CloseAllEditors<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
-nmap <leader>= :action MoveTabRight<CR>
-nmap <leader>- :action MoveTabDown<CR>
 
 
 " ******************** Debugging  ***************************
-nmap <leader>rd :action Debug<CR>
 nmap <leader>rr :action Run<CR>
+nmap <leader>rd :action Debug<CR>
 nmap <leader>b :action ToggleLineBreakpoint<CR>
 
 
 " ******************** File management **********************
 set NERDTree
-nmap <leader>nf :action NewFile<CR>
-nmap <leader>nd :action NewDir<CR>
+" nmap <leader>nd :action NewDir<CR>
+" nmap <leader>nf :action NewFile<CR>
 nmap <leader>rf :action RenameFile<CR>
 nmap <leader>cf :action CopyFileName<CR>
 nmap <leader>cp :action CopyContentRootPath<CR>
@@ -64,17 +65,17 @@ nmap <leader>j :action ActivateProjectToolWindow<CR>
 
 
 " ******************** Navigation ***************************
-map <leader>gl :action GotoLine<CR>
-map <leader>gc :action GotoClass<CR>
-map <leader>gf :action GotoFile<CR>
-map <leader>gs :action GotoSymbol<CR>
-map <leader>ga :action GotoAction<CR>
-nmap <leader>a <Plug>(easymotion-s)
-nmap [[ :action MethodUp<CR>
-nmap ]] :action MethodDown<CR>
 nmap <leader>1 1gt
 nmap <leader>2 2gt
 nmap <leader>3 3gt
+nmap [[ :action MethodUp<CR>
+nmap ]] :action MethodDown<CR>
+nmap <leader>a <Plug>(easymotion-s)
+map <leader>gl :action GotoLine<CR>
+map <leader>gf :action GotoFile<CR>
+map <leader>gc :action GotoClass<CR>
+map <leader>gs :action GotoSymbol<CR>
+map <leader>ga :action GotoAction<CR>
 
 
 " ******************** IDE **********************************
@@ -89,9 +90,9 @@ nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
 
 
 " ******************** Git  *********************************
-nmap <leader>Gb :action Git.Branches<CR>
 nmap <leader>Gp :action Vcs.Push<CR>
 " nmap <leader>Gm :action VcsGroups<CR>
+nmap <leader>Gb :action Git.Branches<CR>
 nmap <leader>Gg :action CheckinProject<CR>
 nmap <leader>Gu :action Vcs.UpdateProject<CR>
 
