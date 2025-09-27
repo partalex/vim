@@ -1,7 +1,6 @@
 " ******************** Editing *****************************
 let mapleader=" "
 set nu rnu
-" set relativenumber number
 set ideajoin
 set easymotion
 xnoremap < <gv
@@ -79,10 +78,9 @@ map <leader>ga :action GotoAction<CR>
 
 
 " ******************** IDE **********************************
-" Ctrl + Alt  \ = Toggle IdeaVim
-" Alt + F11 = Open in terminal (Current file<CR>
 " Ctrl + j = Up, Ctrl + k = Down
-" Caps Lock = Esc
+" Ctrl + Alt + \ = Toggle IdeaVim
+" Alt + F11 = Open in terminal (Current file<CR>
 nmap <leader>ri :action RestartIde<CR>
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>
