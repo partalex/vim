@@ -1,7 +1,7 @@
 let mapleader = ' '
 
 nnoremap <leader>qq :q!<CR>
-nnoremap <leader>s :x
+nnoremap <leader>s :x<CR>
 
 vnoremap > >gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -15,7 +15,7 @@ set showmatch
 noremap <Esc> :nohlsearch<cr>
 xnoremap * y/\V<C-R>"<CR>
 
-set number
+set nu rnu
 set tabstop=4
 set expandtab
 set autoindent
