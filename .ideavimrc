@@ -1,6 +1,7 @@
 " ******************** Editing *****************************
 let mapleader=" "
 set nu rnu
+set surround
 set ideajoin
 set easymotion
 xnoremap < <gv
