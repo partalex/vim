@@ -1,10 +1,11 @@
 " ******************** Editing *****************************
 let mapleader=" "
+set ideajoin
 set easymotion
 set scrolloff=5
 set history=1000
-set ideajoin
 set idearefactormode=keep
+set relativenumber number
 map <leader>ff :action Find<CR>
 map <leader>fr :action Replace<CR>
 map <leader>re :action RenameElement<CR>
