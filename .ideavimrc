@@ -18,7 +18,6 @@ xmap , :action EditorSelectWord<CR>
 map <leader>re :action RenameElement<CR>
 noremap <leader>d :action EditorDuplicate<CR>
 
-
 " ******************** Search *******************************
 set ic
 set hlsearch
@@ -26,7 +25,6 @@ set incsearch
 set smartcase
 xnoremap * y/\V<C-R>"<CR>
 noremap <Esc> :nohlsearch<CR>
-
 
 " ******************** Clipboard ****************************
 nnoremap <leader>xc :%y<CR>
@@ -38,20 +36,20 @@ nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
 xnoremap <leader>p "_d"+P
 
-
 " ******************** Tabs *********************************
+nmap <leader>1 1gt
+nmap <leader>2 2gt
+nmap <leader>3 3gt
 nmap <leader>- :action MoveTabDown<CR>
 nmap <leader>= :action MoveTabRight<CR>
 nmap <leader>qq :action CloseContent<CR>
 nmap <leader>qa :action CloseAllEditors<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
 
-
 " ******************** Debugging  ***************************
 nmap <leader>rr :action Run<CR>
 nmap <leader>rd :action Debug<CR>
 nmap <leader>b :action ToggleLineBreakpoint<CR>
-
 
 " ******************** File management **********************
 set NERDTree
@@ -63,11 +61,7 @@ nmap <leader>cp :action CopyContentRootPath<CR>
 nmap <leader>s :action SelectInProjectView<CR>
 nmap <leader>j :action ActivateProjectToolWindow<CR>
 
-
 " ******************** Navigation ***************************
-nmap <leader>1 1gt
-nmap <leader>2 2gt
-nmap <leader>3 3gt
 nmap [[ :action MethodUp<CR>
 nmap ]] :action MethodDown<CR>
 nmap <leader>a <Plug>(easymotion-s)
@@ -77,17 +71,6 @@ map <leader>gc :action GotoClass<CR>
 map <leader>gs :action GotoSymbol<CR>
 map <leader>ga :action GotoAction<CR>
 
-
-" ******************** IDE **********************************
-" Ctrl + j = Up, Ctrl + k = Down
-" Ctrl + Alt + \ = Toggle IdeaVim
-" Alt + F11 = Open in terminal (Current file<CR>
-nmap <leader>ri :action RestartIde<CR>
-noremap <leader>cc :edit ~/.ideavimrc<CR>
-noremap <leader>cs :source ~/.ideavimrc<CR>
-nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
-
-
 " ******************** Git  *********************************
 nmap <leader>Gp :action Vcs.Push<CR>
 " nmap <leader>Gm :action VcsGroups<CR>
@@ -95,6 +78,14 @@ nmap <leader>Gb :action Git.Branches<CR>
 nmap <leader>Gg :action CheckinProject<CR>
 nmap <leader>Gu :action Vcs.UpdateProject<CR>
 
+" ******************** IDE **********************************
+nmap <leader>ri :action RestartIde<CR>
+noremap <leader>cc :edit ~/.ideavimrc<CR>
+noremap <leader>cs :source ~/.ideavimrc<CR>
+nnoremap <leader>tw :!start cmd /K "cd /d %:p:h"<CR>
+" Ctrl + j = Up, Ctrl + k = Down
+" Ctrl + Alt + \ = Toggle IdeaVim
+" Alt + F11 = Open in terminal (Current file<CR>
 
 " ******************** Plugins ******************************
 Plug 'machakann/vim-highlightedyank'
