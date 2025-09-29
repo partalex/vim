@@ -1,5 +1,4 @@
 " ******************** Editing *****************************
-let mapleader=" "
 set nu rnu
 set surround
 set ideajoin
@@ -8,6 +7,7 @@ xnoremap < <gv
 xnoremap > >gv
 set scrolloff=5
 set history=1000
+let mapleader=" "
 set idearefactormode=keep
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
