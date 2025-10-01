@@ -15,6 +15,7 @@ map <leader>ff :action Find<CR>
 map <leader>fr :action Replace<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
+map <leader>F :action FindInPath<CR>
 map <leader>re :action RenameElement<CR>
 noremap <leader>d :action EditorDuplicate<CR>
 
@@ -35,6 +36,8 @@ nnoremap <leader>p "+p
 nnoremap <leader>yy "+yy
 xnoremap <leader>y  "+y
 xnoremap <leader>p "_d"+P
+xnoremap <leader>d "+d
+nnoremap <leader>dd "+dd
 
 " ******************** Tabs *********************************
 nmap <leader>1 1gt
@@ -70,6 +73,8 @@ map <leader>gf :action GotoFile<CR>
 map <leader>gc :action GotoClass<CR>
 map <leader>gs :action GotoSymbol<CR>
 map <leader>ga :action GotoAction<CR>
+map <leader>N :action Back<CR>
+map <leader>n :action Forward<CR>
 
 " ******************** Git  *********************************
 nmap <leader>Gp :action Vcs.Push<CR>
