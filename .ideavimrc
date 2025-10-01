@@ -28,16 +28,16 @@ xnoremap * y/\V<C-R>"<CR>
 noremap <Esc> :nohlsearch<CR>
 
 " ******************** Clipboard ****************************
+xnoremap <leader>y "+y
+xnoremap <leader>d "+d
+nnoremap <leader>p "+p
+nnoremap <leader>dd "+dd
+nnoremap <leader>yy "+yy
+xnoremap <leader>p "_d"+P
 nnoremap <leader>xc :%y<CR>
-nnoremap <leader>xC :%y+<CR>
 nnoremap <leader>xd :%d<CR>
 nnoremap <leader>xD :%d+<CR>
-nnoremap <leader>p "+p
-nnoremap <leader>yy "+yy
-xnoremap <leader>y  "+y
-xnoremap <leader>p "_d"+P
-xnoremap <leader>d "+d
-nnoremap <leader>dd "+dd
+nnoremap <leader>xC :%y+<CR>
 
 " ******************** Tabs *********************************
 nmap <leader>1 1gt
@@ -67,14 +67,14 @@ nmap <leader>j :action ActivateProjectToolWindow<CR>
 " ******************** Navigation ***************************
 nmap [[ :action MethodUp<CR>
 nmap ]] :action MethodDown<CR>
+map <leader>N :action Back<CR>
+map <leader>n :action Forward<CR>
 nmap <leader>a <Plug>(easymotion-s)
 map <leader>gl :action GotoLine<CR>
 map <leader>gf :action GotoFile<CR>
 map <leader>gc :action GotoClass<CR>
 map <leader>gs :action GotoSymbol<CR>
 map <leader>ga :action GotoAction<CR>
-map <leader>N :action Back<CR>
-map <leader>n :action Forward<CR>
 
 " ******************** Git  *********************************
 nmap <leader>Gp :action Vcs.Push<CR>
