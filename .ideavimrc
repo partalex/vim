@@ -17,7 +17,7 @@ nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 map <leader>F :action FindInPath<CR>
 map <leader>re :action RenameElement<CR>
-noremap <leader>d :action EditorDuplicate<CR>
+noremap <leader>D :action EditorDuplicate<CR>
 
 " ******************** Search *******************************
 set ic
