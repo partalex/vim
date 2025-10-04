@@ -76,12 +76,14 @@ map <leader>gc :action GotoClass<CR>
 map <leader>gs :action GotoSymbol<CR>
 map <leader>ga :action GotoAction<CR>
 
-" ******************** Git  *********************************
+" ******************** Git **********************************
+map <leader>Ga :action Annotate<CR>
 nmap <leader>Gp :action Vcs.Push<CR>
-" nmap <leader>Gm :action VcsGroups<CR>
 nmap <leader>Gb :action Git.Branches<CR>
 nmap <leader>Gg :action CheckinProject<CR>
+nmap <leader>Gm :action Git.ContextMenu<CR>
 nmap <leader>Gu :action Vcs.UpdateProject<CR>
+nmap <leader>Gd :action Git.CompareWithBranch<CR>
 
 " ******************** IDE **********************************
 nmap <leader>ri :action RestartIde<CR>
