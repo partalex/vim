@@ -77,7 +77,7 @@ map <leader>gs :action GotoSymbol<CR>
 map <leader>ga :action GotoAction<CR>
 
 " ******************** Git **********************************
-map <leader>Ga :action Annotate<CR>
+nmap <leader>Ga :action Annotate<CR>
 nmap <leader>Gp :action Vcs.Push<CR>
 nmap <leader>Gb :action Git.Branches<CR>
 nmap <leader>Gg :action CheckinProject<CR>
