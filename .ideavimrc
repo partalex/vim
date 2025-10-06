@@ -9,13 +9,14 @@ set scrolloff=5
 set history=1000
 let mapleader=" "
 set idearefactormode=keep
-xnoremap K :action MoveLineUp<CR>
-xnoremap J :action MoveLineDown<CR>
 map <leader>ff :action Find<CR>
+xnoremap K :action MoveLineUp<CR>
 map <leader>fr :action Replace<CR>
+xnoremap J :action MoveLineDown<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 map <leader>F :action FindInPath<CR>
+map <leader>R :action ReplaceInPath<CR>
 map <leader>re :action RenameElement<CR>
 noremap <leader>D :action EditorDuplicate<CR>
 
