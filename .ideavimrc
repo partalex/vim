@@ -9,8 +9,8 @@ set scrolloff=5
 set history=1000
 let mapleader=" "
 set idearefactormode=keep
-xnoremap K :m '<-2<CR>gv=gv
-xnoremap J :m '>+1<CR>gv=gv
+xnoremap K :action MoveLineUp<CR>
+xnoremap J :action MoveLineDown<CR>
 map <leader>ff :action Find<CR>
 map <leader>fr :action Replace<CR>
 nmap , :action EditorSelectWord<CR>
@@ -48,6 +48,7 @@ nmap <leader>= :action MoveTabRight<CR>
 nmap <leader>qq :action CloseContent<CR>
 nmap <leader>qa :action CloseAllEditors<CR>
 nmap <leader>qo :action CloseAllEditorsButActive<CR>
+nmap <leader>+ :action MoveEditorToOppositeTabGroup<CR>
 
 " ******************** Debugging  ***************************
 nmap <leader>rr :action Run<CR>
@@ -58,6 +59,7 @@ nmap <leader>b :action ToggleLineBreakpoint<CR>
 set NERDTree
 " nmap <leader>nd :action NewDir<CR>
 " nmap <leader>nf :action NewFile<CR>
+nmap <leader>o :action OpenFile<CR>
 nmap <leader>rf :action RenameFile<CR>
 nmap <leader>cf :action CopyFileName<CR>
 nmap <leader>cp :action CopyContentRootPath<CR>
@@ -84,6 +86,7 @@ nmap <leader>Gg :action CheckinProject<CR>
 nmap <leader>Gm :action Git.ContextMenu<CR>
 nmap <leader>Gu :action Vcs.UpdateProject<CR>
 nmap <leader>Gd :action Git.CompareWithBranch<CR>
+nmap <leader>Gr :action Vcs.RollbackChangesLines<CR>
 
 " ******************** IDE **********************************
 nmap <leader>ri :action RestartIde<CR>
