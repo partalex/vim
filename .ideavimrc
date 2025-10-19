@@ -1,5 +1,5 @@
 " ******************** Editing *****************************
-set nu rnu
+set nu
 set surround
 set ideajoin
 set easymotion
