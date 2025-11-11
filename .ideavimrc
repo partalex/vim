@@ -16,6 +16,7 @@ xnoremap J :action MoveLineDown<CR>
 nmap , :action EditorSelectWord<CR>
 xmap , :action EditorSelectWord<CR>
 map <leader>F :action FindInPath<CR>
+xmap < :action EditorUnSelectWord<CR>
 map <leader>R :action ReplaceInPath<CR>
 map <leader>re :action RenameElement<CR>
 noremap <leader>D :action EditorDuplicate<CR>
