@@ -1,1 +1,1 @@
-## This repository has purpose to configure vim
+## This repository has purpose to improve os configuration

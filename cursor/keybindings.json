@@ -1,0 +1,247 @@
+[
+  // Alt + s: Save
+  {
+    "key": "alt+s",
+    "command": "workbench.action.files.save"
+  },
+  // Alt + w (malo w): ZATVARA SAMO AKO NIJE EDITOVAN (Dirty je false)
+  {
+    "key": "alt+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!activeEditorIsDirty"
+  },
+  // Alt + w (malo w): Ako JE EDITOVAN, ne radi ništa (ili možeš staviti komandu koja samo "pišti")
+  {
+    "key": "alt+w",
+    "command": "",
+    "when": "activeEditorIsDirty"
+  },
+  // Alt + Shift + w (veliko W): ABANDON - Zatvara i odbacuje izmene bez pitanja
+  {
+    "key": "alt+shift+w",
+    "command": "workbench.action.revertAndCloseActiveEditor"
+  },
+  // Isključivanje standardnih prečica
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "-workbench.action.files.save"
+  },
+  // Leader + e (ActivateProjectToolWindow)
+  // Otvara Sidebar i prebacuje kursor (fokus) u listu fajlov
+  {
+    "key": "space e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + Shift + E (SelectInProjectView)
+  // Pronalazi trenutni fajl u exploreru i fokusira ga
+  {
+    "key": "space shift+e",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+  // Ctrl + k (gt - Next Tab)
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + 1, 2, 3 (Go to specific tab)
+  {
+    "key": "space 1",
+    "command": "workbench.action.openEditorAtIndex1",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space 2",
+    "command": "workbench.action.openEditorAtIndex2",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space 3",
+    "command": "workbench.action.openEditorAtIndex3",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + - (MoveTabDown - Move editor to group below)
+  {
+    "key": "space -",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + = (MoveTabRight - Move editor to group on the right)
+  {
+    "key": "space =",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + qa (CloseAllEditors)
+  {
+    "key": "space q a",
+    "command": "workbench.action.closeAllEditors",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + qo (CloseAllEditorsButActive)
+  {
+    "key": "space q o",
+    "command": "workbench.action.closeOtherEditors",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + + (MoveEditorToOppositeTabGroup)
+  // Napomena: U VS Code-u ovo obično znači pomeranje u sledeću grupu
+  {
+    "key": "space shift+=",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Ctrl + j: Fokusiraj grupu LEVO
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Ctrl + l: Fokusiraj grupu DESNO
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.closeSidebar",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // Leader + F (Find in Path) - Globalna pretraga teksta kroz ceo projekat
+  {
+    "key": "space shift+f",
+    "command": "workbench.action.findInFiles",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + gf (Go to File) - Brza pretraga fajlova (Double Shift stil)
+  {
+    "key": "space g f",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + ff (Find) - Pretraga teksta u TRENUTNOM fajlu
+  {
+    "key": "space f f",
+    "command": "actions.find",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + gs (Global Symbol) - Globalna pretraga simbola (metoda, klasa)
+  {
+    "key": "space g s",
+    "command": "workbench.action.showAllSymbols",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + fr (Find & Replace) - Lokalni replace (u trenutnom fajlu)
+  {
+    "key": "space f r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + R (Global Replace) - Replace kroz ceo projekat
+  {
+    "key": "space shift+r",
+    "command": "workbench.action.replaceInFiles",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + re (Rename Element) - Pametno preimenovanje promenljive (F2)
+  {
+    "key": "space r e",
+    "command": "editor.action.rename",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  //
+  {
+    "key": "space c",
+    "command": "workbench.action.chat.open",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space k",
+    "command": "aiecursor.inlineChat",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space .",
+    "command": "editor.action.quickFix",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Navigacija kroz Liste i Menije (Explorer, Quick Open, Suggest liste)
+  {
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  // Navigacija kroz Autocomplete (Suggest) listu dok kucaš
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  // Navigacija kroz Quick Open (Space gf pretraga fajlova)
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && vim.mode != 'Insert'"
+  },
+  // Leader + D (Shift + d) u Normal modu: Duplira trenutnu liniju na dole
+  {
+    "key": "space shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // Leader + D (Shift + d) u Visual modu: Duplira selektovani blok na dole
+  {
+    "key": "space shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && vim.mode == 'Visual'"
+  },
+  // Expand Selection (Pametno širenje)
+  {
+    "key": "ctrl+w",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  // Shrink Selection (Vraćanje na prethodnu manju selekciju)
+  {
+    "key": "ctrl+shift+w",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  }
+]

@@ -1,0 +1,122 @@
+" ******************** Editing *****************************
+"set rnu
+set VimEverywhere
+set surround
+set ideajoin
+set easymotion
+xnoremap < <gv
+xnoremap > >gv
+set scrolloff=8
+set history=1000
+let mapleader=" "
+nmap <leader>a <Plug>(easymotion-s)
+nmap <leader>v g_v^
+set idearefactormode=keep
+xnoremap K :action MoveLineUp<CR>
+xnoremap J :action MoveLineDown<CR>
+map <leader>D <Action>(EditorDuplicate)
+nmap <C-,> <Action>(EditorSelectWord)
+xmap <C-,> <Action>(EditorSelectWord)
+
+" ******************** Find and replace *********************
+map <leader>/ <Action>(Find)
+map <leader>rr <Action>(Replace)
+map <leader>F <Action>(FindInPath)
+map <leader>R <Action>(ReplaceInPath)
+map <leader>re <Action>(RenameElement)
+
+" ******************** Search *******************************
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+xnoremap * y/\V<C-R>"<CR>
+noremap <Esc> :nohlsearch<CR>
+
+" ******************** Clipboard ****************************
+xnoremap <leader>c "+y
+xnoremap <leader>x "+d
+nnoremap <leader>V "+p
+nnoremap <leader>d "+dd
+nnoremap <leader>c "+yy
+nnoremap <leader>Y "g_v^"+y
+xnoremap <leader>v "_d"+P
+nnoremap <leader>X gg"_dG"+p
+nnoremap <leader>xd :%d<CR>
+nnoremap <leader>xD :%d+<CR>
+nnoremap <leader>C :%y+<CR>
+
+" ******************** Tabs *********************************
+nnoremap <C-k> gt
+nmap <leader>1 1gt
+nmap <leader>2 2gt
+nmap <leader>3 3gt
+nmap <leader>- <Action>(MoveTabDown)
+nmap <leader>= <Action>(MoveTabRight)
+nmap <leader>qa <Action>(CloseAllEditors)
+nmap <leader>qo <Action>(CloseAllEditorsButActive)
+nmap <leader>+ <Action>(MoveEditorToOppositeTabGroup)
+
+" ******************** Debugging  ***************************
+nmap <leader>rr <Action>(Run)
+nmap <leader>rs <Action>(Stop)
+nmap <leader>rd <Action>(Debug)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+
+" ******************** Project view ************************
+set NERDTree
+nmap <leader>o <Action>(OpenFile)
+nmap <leader>rf <Action>(RenameFile)
+nmap <leader>hf <Action>(CopyFileName)
+nmap <leader>hp <Action>(CopyContentRootPath)
+nmap <leader>E <Action>(SelectInProjectView)
+"nmap <leader>e <Action>(ActivateProjectToolWindow)
+
+" ******************** Navigation ***************************
+nnoremap <C-j> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-d> <C-d>zt
+nnoremap <C-u> <C-u>zt
+nnoremap <C-f> <C-f>zt
+nnoremap <C-b> <C-b>zt
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+map <leader>f <Action>(GotoFile)
+map <leader>gs <Action>(GotoSymbol)
+map <leader>ga <Action>(GotoAction)
+if has('ide')
+  if &ide =~? 'datagrip'
+    nmap <leader>gd <Action>(GotoDatabaseObject)
+  else
+    nmap <leader>gc <Action>(GotoClass)
+  endif
+endif
+
+" ******************** Git **********************************
+nmap <leader>Ga <Action>(Annotate)
+nmap <leader>Gp <Action>(Vcs.Push)
+nmap <leader>Gb <Action>(Git.Branches)
+nmap <leader>Gg <Action>(CheckinProject)
+nmap <leader>Gm <Action>(Git.ContextMenu)
+nmap <leader>Gu <Action>(Vcs.UpdateProject)
+nmap <leader>Gd <Action>(Compare.SameVersion)
+nmap <leader>Gf <Action>(Diff.FocusOppositePane)
+nmap <leader>GD <Action>(Git.CompareWithBranch)
+nmap <leader>Gr <Action>(Vcs.RollbackChangesLines)
+
+" ******************** IDE **********************************
+nmap <leader>jj <Action>(ReformatCode)
+nmap <leader>ir <Action>(RestartIde)
+nmap <leader>ik <Action>(ChangeKeymap)
+nmap <leader>if <Action>(ToggleFullScreen)
+nmap <leader>ip <Action>(WelcomeScreen.Plugins)
+nmap <leader>is <Action>(EditorToggleUseSoftWraps)
+nmap <leader>iz <Action>(ToggleDistractionFreeMode)
+nmap <leader>ih <Action>(HideAllWindows)
+noremap <leader>hh :edit ~/.ideavimrc<CR>
+noremap <leader>hs :source ~/.ideavimrc<CR>
+nnoremap <leader>tw :!start powershell<CR>
+
+" ******************** Plugins ******************************
+Plug 'machakann/vim-highlightedyank'
+" Plug 'tpope/vim-commentary'

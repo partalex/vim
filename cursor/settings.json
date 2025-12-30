@@ -1,0 +1,152 @@
+{
+  "vim.vimrc.enable": false,
+  // Isključujemo vimrc jer sve selimo ovde
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "keyboard.dispatch": "keyCode",
+  "vim.handleKeys": {
+    "<space>": false,
+    "<C-w>": false,
+    "<A-w>": false,
+    "<A-W>": false,
+    "<A-s>": false,
+    "<C-k>": false,
+    "<C-j>": false,
+    "<C-l>": false,
+    "<C-e>": false
+  },
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.insertModeKeyBindings": [],
+  "vim.useSystemClipboard": false,
+  // Zadržavamo Vim registre odvojene od sistemskog
+  "vim.normalModeKeyBindings": [
+    // Leader + p: Paste iz sistemskog clipboarda
+    {
+      "before": [
+        "leader",
+        "p"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "p"
+      ]
+    },
+    // Leader + yy: Yank linije u sistemski clipboard
+    {
+      "before": [
+        "leader",
+        "y",
+        "y"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "y",
+        "y"
+      ]
+    },
+    // Leader + dd: Delete linije u sistemski clipboard
+    {
+      "before": [
+        "leader",
+        "d",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "d",
+        "d"
+      ]
+    },
+    // Leader + xc: Kopiraj ceo fajl u Vim registar
+    {
+      "before": [
+        "leader",
+        "x",
+        "c"
+      ],
+      "commands": [
+        ":%y"
+      ]
+    },
+    // Leader + xd: Obriši ceo sadržaj fajla
+    {
+      "before": [
+        "leader",
+        "x",
+        "d"
+      ],
+      "commands": [
+        ":%d"
+      ]
+    },
+    // Leader + xC: Kopiraj ceo fajl u SISTEMSKI clipboard
+    {
+      "before": [
+        "leader",
+        "x",
+        "C"
+      ],
+      "commands": [
+        ":%y+"
+      ]
+    },
+    // Leader + xD: Obriši ceo fajl i baci u SISTEMSKI clipboard
+    {
+      "before": [
+        "leader",
+        "x",
+        "D"
+      ],
+      "commands": [
+        ":%d+"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Leader + y: Yank selekcije u sistemski clipboard
+    {
+      "before": [
+        "leader",
+        "y"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "y"
+      ]
+    },
+    // Leader + d: Delete selekcije u sistemski clipboard
+    {
+      "before": [
+        "leader",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "+",
+        "d"
+      ]
+    },
+    // Leader + p: Paste preko selekcije bez gubitka sistemskog clipboarda
+    // (Vim ekvivalent za "_d"+P)
+    {
+      "before": [
+        "leader",
+        "p"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d",
+        "\"",
+        "+",
+        "P"
+      ]
+    }
+  ]
+}
